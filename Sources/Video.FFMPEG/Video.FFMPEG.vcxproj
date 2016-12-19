@@ -95,10 +95,13 @@
       <DocumentLibraryDependencies>false</DocumentLibraryDependencies>
     </Xdcmake>
     <PostBuildEvent>
-      <Command>sn -Ra $(TargetPath) $(ProjectDir)AForge.Video.FFMPEG.snk</Command>
+      <Command>sn -Ra "$(TargetPath)" "$(ProjectDir)AForge.Video.FFMPEG.snk"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401">
+      <HintPath>..\..\Release\AForge.Video.dll</HintPath>
+    </Reference>
     <Reference Include="AForge.Video, Version=2.2.4.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401">
       <HintPath>..\..\Release\AForge.Video.dll</HintPath>
     </Reference>
